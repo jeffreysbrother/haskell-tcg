@@ -1,6 +1,9 @@
 import Data.List
 import System.IO
 import System.Directory
+import System.FilePath
 
 cwd = getCurrentDirectory
-home = getHomeDirectory
+pathToSection = cwd ++ '/source/sections';
+pathToConfig = cwd ++ '/config.json';
+-- devInitials = require(pathToConfig).developer;
