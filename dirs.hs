@@ -16,10 +16,21 @@ cwd = getCurrentDirectory
 -- pathToConfig = cwd ++ '/config.json'
 -- devInitials = require(pathToConfig).developer
 
-section :: FilePath
-section = "/source/sections"
+pathToSection :: FilePath
+pathToSection = "/source/sections"
 
 -- toText :: section -> Text
 -- flattenIO xs = fmap flatten xs
 -- encodeString :: FilePath -> String
 -- encodeString cwd = best
+
+main = do
+ putStrLn "What section are you working on?"
+ section <- getLine
+ putStrLn "What directory do you wish to copy?"
+ copyDir <- getLine
+ putStrLn "How many variations would you like?"
+ varations <- getLine
+ putStrLn "Please enter a short branch description"
+ branch <- getLine
+ putStrLn ("Thanks!")
